@@ -9,13 +9,14 @@ class MultipTable{
     
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
-        int n=6;
+        System.out.println("Enter a number to print its multiplication table");
+        int n=sc.nextInt();
         int a[]=new int[5];
         int b[]=new int[5];
         System.out.print("\t");
         for(int i=1;i<6;i++){
             int num=i;
-            int deno=6;
+            int deno=n;
             int g=gcd(num,deno);
             num/=g;
             deno/=g;
@@ -27,7 +28,7 @@ class MultipTable{
         System.out.println("\n");
         for(int i=1;i<6;i++){
             int num=i;
-            int deno=6;
+            int deno=n;
             int g=gcd(num,deno);
             num/=g;
             deno/=g;
@@ -46,5 +47,6 @@ class MultipTable{
             System.out.println();
             
         }
+        sc.close();
     }
 }

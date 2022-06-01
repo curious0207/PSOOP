@@ -15,7 +15,7 @@ class Main{
         System.out.print("-----");
         for(int i=1;i<6;i++){
             int num=i;
-            int deno=6;
+            int deno=n;
             int g=gcd(num,deno);
             num/=g;
             deno/=g;
@@ -25,7 +25,7 @@ class Main{
         System.out.println("\n");
         for(int i=1;i<6;i++){
             int num=i;
-            int deno=6;
+            int deno=n;
             int g=gcd(num,deno);
             num/=g;
             deno/=g;
@@ -62,5 +62,6 @@ class Main{
         //     }
         // }
         //System.out.println("\n");
+        sc.close();
     }
 }

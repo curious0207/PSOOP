@@ -1,52 +1,53 @@
-import java.util.Scanner;
-import java.util.Arrays;
+import java.util.*;
 class movie{
-    String name,type,hname,hiname;
-    int b;
-
-    movie(String name,String type,String hname,String hiname,int b){
-        this.name=name;
-        this.type=type;
-        this.hname=hname;
-        this.hiname=hiname;
-        this.b=b;
+    String a,b,c,d;
+    movie(String name,String type,String hname,String hiname){
+        a=name;
+        b=type;
+        c=hname;
+        d=hiname;
     }
-
 }
 
-public class MovieInfo {
+class MovieInfo {
     public static void main(String[] args) {
        Scanner sc=new Scanner(System.in);
        System.out.println("enter total no. of movies to store info of");
        int n=sc.nextInt();
        movie arr[]=new movie[n];
+       int bg[]=new int[n];
+       String nm,ty="",h1="",h2="";
        for(int i=0;i<n;i++){
-           String nm=sc.nextLine();
-           String ty=sc.nextLine();
-           String h1=sc.nextLine();
-           String h2=sc.nextLine();
+           nm=sc.next();
+           //ty=sc.nextLine();
+           //h1=sc.nextLine();
+           //h2=sc.nextLine();
            sc.nextLine();
-           int bg=sc.nextInt();
-           arr[i]=new movie(nm,ty,h1,h2,bg);    
-       }
-       //System.out.println(arr[0].b); 
-       for(int i=0;i<n;i++){
-           int min=i;
-           for(int j=i+1;j<n;j++){
-                if(arr[j].b<arr[min].b){
+           bg[i]=sc.nextInt();
+           arr[i]=new movie(nm,ty,h1,h2);          
+        }
+       // sort
+       System.out.println("Movies sorted according to their budget");
+        for(int i=0;i<n;i++){
+            int min=i;
+            for(int j=i+1;j<n;j++){
+                if(bg[j]<bg[i]){
                     min=j;
                 }
-           }
-          // System.out.println(arr[min].name);
-           int temp=arr[i].b;
-           arr[i].b=arr[min].b;
-           arr[min].b=temp;
-           //System.out.println(arr[min].name);
-       }
-       System.out.println("sorted bugdet:");
-       for(int k=0;k<n;k++){
-           System.out.println(arr[k].b);
-       }
+            }
+            int temp=bg[i];
+            bg[i]=bg[min];
+            bg[min]=temp;
+            // string swap
+            String temps=arr[i].a;
+            arr[i].a=arr[min].a;
+            arr[min].a=temps;
+            System.out.print(bg[i]+" ");
+            //System.out.println(min);
+             
+            System.out.println(arr[i].a);
+            System.out.println();
+        }
        sc.close();
     }
 }

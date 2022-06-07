@@ -9,11 +9,13 @@ class Test{
         argument=2;
     }
     double calculate(double base,int power){
+        System.out.println(base+" raised to "+power+" is ");
         return Math.pow(base,power);
     }
     double calculate(int logBase,int argument){
         double num=Math.log(argument);
         double deno=Math.log(logBase);
+        System.out.println("log of "+argument+" to the base "+logBase+" is ");
         return num/deno;
     }
 }

@@ -26,7 +26,7 @@ class Posting{
     void display(int d){
         if(count==1){
             if(d>=80){
-                System.out.println("Selected");
+                System.out.println("Congratulations!You are selected");
             }
             else{
                 System.out.println("Try next time,not Selected");
@@ -34,7 +34,7 @@ class Posting{
         }
         else if(count==2){
             if(d>=85){
-                System.out.println("Selected");
+                System.out.println("Congratulations!You are selected");
             }
             else{
                 System.out.println("Try next time,not Selected");
@@ -42,7 +42,7 @@ class Posting{
         }
         if(count==3){
             if(d>=90){
-                System.out.println("Selected");
+                System.out.println("Congratulations!You are selected");
             }
             else{
                 System.out.println("Try next time,not Selected");
@@ -58,18 +58,25 @@ public class EmployeeRecruit
 		int choice=sc.nextInt();
 		switch (choice) {
 		    case 1:
+                System.out.println("Enter score of course work");
 		        int cw=sc.nextInt();
+                System.out.println("Enter score of aptitude test");
 		        int aptest=sc.nextInt();
+                System.out.println("Enter score of Technical test");
 		        int tt=sc.nextInt();
+                System.out.println("Enter score of interview");
 		        int interview=sc.nextInt();
 		        Posting p1=new Posting(cw,aptest,tt,interview);
 		        break;
 		   case 2:
+                System.out.println("Enter score of Technical Test");
 		        tt=sc.nextInt();
+                System.out.println("Enter score of interview");
 		        interview=sc.nextInt();
 		        Posting p2=new Posting(tt,interview);
 		        break;
 		   case 3:
+                System.out.println("Enter score of interview");
 		        interview=sc.nextInt();
 		        Posting p3=new Posting(interview);
 		        break;      

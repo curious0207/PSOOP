@@ -93,21 +93,39 @@ class Date{
 public class Datecheck
 {
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-        
+        Scanner sc=new Scanner(System.in); 
+        System.out.println("Enter 1 to display date with 3 paramters\n2 to display date with 5 paramters\n3 to display date with 6 paramters");
+		int n=sc.nextInt();
+        int hr,min;
+        System.out.println("Enter the year");
 		int yr=sc.nextInt();
+        System.out.println("Enter the month");
 		int mo=sc.nextInt();
+        System.out.println("Enter the date");
 		int dat=sc.nextInt();
 		Date d1=new Date();
-		d1.setDate(yr,mo,dat);  
-        int hr=sc.nextInt();
-        int min=sc.nextInt();
-		Date d2=new Date();
-        d2.setDate(yr, mo, dat, hr, min);
-		int s=sc.nextInt();
-        Date d3=new Date();
-        d3.setDate(yr, mo, dat, hr, min,s);
-	    sc.close();
-	
+        if(n==1){
+            d1.setDate(yr,mo,dat);
+        }
+		else if(n==2){
+            System.out.println("Enter hours");
+            hr=sc.nextInt();
+            System.out.println("Enter minutes");
+            min=sc.nextInt();
+		    Date d2=new Date();
+            d2.setDate(yr, mo, dat, hr, min);
+        }
+        else if(n==3){
+            System.out.println("Enter hours");
+            hr=sc.nextInt();
+            System.out.println("Enter minutes");
+            min=sc.nextInt();
+            System.out.println("Enter seconds");
+            int s=sc.nextInt();
+            Date d3=new Date();
+            d3.setDate(yr, mo, dat, hr, min,s);
+        }
+		
+	    sc.close();	
 	}
 }

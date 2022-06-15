@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 class movie{
     String a,b,c,d;
     movie(String name,String type,String hname,String hiname){

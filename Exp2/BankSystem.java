@@ -1,5 +1,4 @@
-import java.util.Scanner;
-import java.lang.Math;
+import java.util.*;
 class bank{
     int ibal;
     float ri;

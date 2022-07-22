@@ -1,4 +1,7 @@
+package  mypack;
+
 import java.util.*;
+
 class movie{
     String a,b,c,d;
     movie(String name,String type,String hname,String hiname){

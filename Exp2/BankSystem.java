@@ -1,8 +1,8 @@
 import java.util.*;
-class bank{
+class bank2{
     int ibal;
     float ri;
-    bank(int bal,float roi){
+    bank2(int bal,float roi){
         ibal=bal;
         ri=roi;
     }
@@ -35,7 +35,7 @@ public class BankSystem {
         int bal=sc.nextInt();
         System.out.println("Enter the rate of interest");
         float roi=sc.nextFloat();
-        bank b1=new bank(bal, roi);
+        bank2 b1=new bank2(bal, roi);
         while(true){
             System.out.println("Enter 1:To make deposit, 2:To withdraw an amount for the balance\n3:To find compound interest, 4:To know the balance amount");
             int choice=sc.nextInt();

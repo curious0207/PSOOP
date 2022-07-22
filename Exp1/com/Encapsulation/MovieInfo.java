@@ -1,10 +1,8 @@
-package  mypack;
+import java.util.Scanner;
 
-import java.util.*;
-
-class movie{
+class movie1{
     String a,b,c,d;
-    movie(String name,String type,String hname,String hiname){
+    movie1(String name,String type,String hname,String hiname){
         a=name;
         b=type;
         c=hname;
@@ -17,7 +15,7 @@ class MovieInfo {
        Scanner sc=new Scanner(System.in);
        System.out.println("enter total no. of movies to store info of");
        int n=sc.nextInt();
-       movie arr[]=new movie[n];
+       movie1 arr[]=new movie1[n];
        int bg[]=new int[n];
        String nm,ty,h1,h2;
        for(int i=0;i<n;i++){
@@ -32,7 +30,7 @@ class MovieInfo {
            h2=sc.nextLine();
            System.out.println("Enter budget of the movie");
            bg[i]=sc.nextInt();
-           arr[i]=new movie(nm,ty,h1,h2);          
+           arr[i]=new movie1(nm,ty,h1,h2);          
         }
         System.out.println();
        // sort

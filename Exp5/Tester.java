@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-class Employee{
+class Employee5{
     private String name,id;
     private int age;
-    Employee(String a,String b,int c){
+    Employee5(String a,String b,int c){
         this.name=a;
         this.id=b;
         this.age=c;
@@ -21,7 +21,7 @@ class Employee{
      
 }
 
-class SalariedEmployee extends Employee{
+class SalariedEmployee extends Employee5{
     private double empSalary;
     SalariedEmployee(String a1,String b1,int c1,double empSalary){
         super(a1,b1,c1);
